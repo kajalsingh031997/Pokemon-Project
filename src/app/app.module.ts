@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatTableModule } from '@angular/material/table'  
-
+import {MatTableModule} from '@angular/material/table'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +20,6 @@ import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-deta
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatPaginatorModule,
     MatTableModule
   ],
   providers: [],
