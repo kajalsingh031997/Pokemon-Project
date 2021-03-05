@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 p-0 pokemon-detail">
+        <div class="col-sm-5">
+            <div class="pokedex-pokemon-profile">
+                <div class="profile-images">
+                    <img class="active" src={{pokemonImg}} alt={{pokemonName}}>
+                    <h3 class="text-center">{{pokemonName | titlecase}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 col-sm-7 col-md-7 col-xs-7">
+            <h3>Versions</h3>
+            <div class="color-bg color-lightblue d-flex shadow-none p-3 mb-5 bg-light rounded">
+                <div class="col-sm-6">
+                    <span class="attr-title">Height</span>
+                    <span class="attr-value">{{pokemonHeight}}</span>
+                    <span class="attr-title">Ability</span>
+                    <div id="menu-outer">
+                        <div class="table">
+                            <ul id="horizontal-list p-0">
+                                <li *ngFor="let abil of pokemonAbilities"><a href="" class="text-dark">
+                                        {{abil.ability.name}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <span class="attr-title">Wight</span>
+                    <span class="attr-value">{{pokemonWeight}}</span>
+                </div>
+            </div>
+            <br />
+            <h3>Moves</h3>
+            <div class="color-bg color-lightblue shadow-none p-3 mb-5 bg-light rounded">
+                <div id="menu-outer">
+                    <div class="table">
+                        <ul id="horizontal-list">
+                            <li *ngFor="let index of pokemonMoves"><a href="" class="a_top_hypers">
+                                    {{index.move.name | titlecase}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <h3>Stats</h3>
+            <div class="color-bg color-lightblue shadow-none p-3 mb-5 bg-light rounded">
+                <div id="menu-outer">
+                    <div class="table">
+                        <ul id="horizontal-list">
+                            <li *ngFor="let stats of pokemonStats"><a href="" class="a_top_hypers">
+                                    {{stats.stat.name | titlecase}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
