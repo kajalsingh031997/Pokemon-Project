@@ -1,8 +1,6 @@
 import { PokemonApiService } from '../../services/pokemon-api.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-
 
 @Component({
   selector: 'app-pokemon-list',
@@ -15,8 +13,6 @@ export class PokemonListComponent implements OnInit {
   dataSource = new MatTableDataSource<any>();
   offset : number = 0;
   limit : number = 10;
-
-  @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
 
   constructor(private pokemonapi: PokemonApiService) { }
 
@@ -38,8 +34,8 @@ export class PokemonListComponent implements OnInit {
     });
   }
 
-  pagination(num:number){
-    this.offset = num;
+  pagination(){
+    this.offset = this.offset + 1;
     this.getPokemonList();
   }
 
