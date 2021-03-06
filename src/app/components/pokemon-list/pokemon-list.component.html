@@ -13,7 +13,8 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
         <div class="text-right">
-            <button class="btn btn-primary" (click)="pagination()">Load More</button>
+            <button class="btn btn-primary" (click)="previousPagination()" [disabled]="offset == 0">Previous</button>
+            <button class="btn btn-primary" (click)="nextPagination()">Next</button>
         </div>
     </div>
 </div>

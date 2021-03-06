@@ -34,8 +34,13 @@ export class PokemonListComponent implements OnInit {
     });
   }
 
-  pagination(){
+  nextPagination(){
     this.offset = this.offset + 1;
+    this.getPokemonList();
+  }
+
+  previousPagination(){
+    this.offset = this.offset - 1;
     this.getPokemonList();
   }
 
